@@ -282,20 +282,19 @@ hr {
     margin: 0 -5px;
 }
 
-.resume-button {
-    display: block;       /* display the button as a block element */
-    margin: 0 auto;       /* center the button horizontally within its parent element */
-    padding: 0.5em 1em;   /* add some padding to the button */
-    font-size: 1.5em;       /* set the font size of the button text */
-    border: none;         /* remove the border from the button */
-    border-radius: 4px;   /* add a border radius to the button */
-    background-color: rgb(238, 238, 238);  /* set the background color of the button */
-    color: rgb(0, 0, 0);         /* set the color of the button text */
-    cursor: pointer;      /* change the cursor to a pointer when hovering over the button */
-  }
-  
-  /* Add a hover effect to the button */
-  .resume-button:hover {
-    background-color: rgb(193, 193, 193);  /* change the background color of the button on hover */
-  }
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #333;
+}
   
