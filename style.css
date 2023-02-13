@@ -8,6 +8,20 @@ body {
     color: #333;
 }
 
+.dark-mode {
+    background-color: rgb(12, 12, 12);
+    color: rgb(241, 241, 241);
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+body:not(.dark-mode) #dark-mode-toggle {
+    filter: invert(100%);
+}
+
 /* Layout */
 .container {
     margin-left: auto;
@@ -20,9 +34,19 @@ body {
         width: 970px;
      }
 }
+
 .row {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+}
+
+.inter-row {
+    background-color: #eee;
+    padding-top: 1px;
+    margin-top: 10px;
+}
+body.dark-mode .inter-row {
+    background-color: rgb(34, 34, 34);
 }
 
 /* Props */
@@ -84,12 +108,25 @@ h2 {
     width: 40px;
     height: 40px;
 }
+body.dark-mode #dark-icon {
+    filter: invert(100%);
+}
+body.dark-mode #iemail {
+    filter: invert(100%);
+}
+
 #demail {
     margin-top: 10px;
     color: #555;
     opacity: 0;
     transition: opacity 0.7s;
 }
+body.dark-mode #demail {
+    filter: invert(100%);
+}
+
+
+/* Horizontal line */
 hr {
     height: 1px;
     background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
@@ -100,6 +137,13 @@ hr {
     margin: 20px 0px 20px 0px;
     border: 0;
 }
+body.dark-mode hr {
+    background-image: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0));
+    background-image:    -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0));
+    background-image:     -ms-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0));
+    background-image:      -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0));
+}
+
 .ico {
     grid-column: span 1;
     vertical-align: top;
@@ -112,6 +156,18 @@ hr {
     max-width: 80px;
     margin-left: 10px;
 }
+
+
+/* Current date */
+
+body:not(.dark-mode) #curr_date {
+    color: rgb(12, 12, 12);
+}
+
+body.dark-mode #curr_date {
+    color: rgb(241, 241, 241);
+}
+  
 .desc {
     grid-column: span 10;
     vertical-align: top;
@@ -120,6 +176,8 @@ hr {
     padding-bottom: 20px;
 }
 
+/* Entry dot */
+
 .entry-dot {
     position: absolute;
     top: 2px;
@@ -127,16 +185,31 @@ hr {
     width: 10px;
     height: 10px;
     border-radius: 3px;
-    background-color: #cfcfcf;
     border: 2px solid white;
+    background-color: #cfcfcf;
+    
 }
+body.dark-mode .entry-dot {
+    background-color: rgb(85, 85, 85);
+    border: 2px solid rgb(12, 12, 12);
+}
+
+/* Main entry dot */
+
+#main-dot {
+    background-color: rgb(85, 85, 85);
+}
+body.dark-mode #main-dot {
+    background-color: white;
+}
+
 .timespan {
     grid-column: span 1;
     font-size: 12px;
     text-align: right;
     padding-right: 8px;
     color: #bbb;
-    /* width: 70px; */
+    width: 70px;
 }
 .hassets {
     position: relative;
@@ -156,12 +229,8 @@ hr {
     margin-bottom: 20px;
     margin-top: 40px;
 }
-#featured-talks .row {
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    padding-bottom: 30px;
-}
 
+/* SoundCloud cards */
 .card {
     grid-column: span 3;
     vertical-align: top;
@@ -185,6 +254,12 @@ hr {
     border-radius: 5px;
     width: 100%;
 }
+body.dark-mode .card {
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+
 .cdesc {
     height: 30px;
     vertical-align: top;
@@ -235,13 +310,22 @@ hr {
     display: inline;
     color: #333;
 }
+body.dark-mode .pub-title {
+    color: #ddd;
+}
 .pub-venue {
     display: inline;
     color: #090;
 }
+body.dark-mode .pub-venue {
+    color: #0f0;
+}
 .pub-authors {
     display: block;
     color: #900;
+}
+body.dark-mode .pub-authors {
+    color: #f00;
 }
 .tul {
     text-align: center;
@@ -266,7 +350,6 @@ hr {
  }
 
  .box a {
-    color: #000000;
     text-decoration: none;
 }
 
@@ -289,12 +372,18 @@ hr {
     font-size: 16px;
     border: 1px solid #333;
     border-radius: 4px;
-    background-color: #333;
-    color: #fff;
+    background-color: #eee;
     text-decoration: none;
 }
-
 .button:hover {
+    background-color: #fff;
+    color: #333;
+}
+body.dark-mode .button {
+    background-color: #333;
+    color: #fff;
+}
+body.dark-mode .button:hover {
     background-color: #fff;
     color: #333;
 }
@@ -317,3 +406,20 @@ hr {
 #unreleased_button:hover {
     opacity: 1;
 }
+
+a {
+    text-decoration: none;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+    color: inherit;
+  }
+  
+a.hyperlink:hover{
+    text-decoration: none;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+    color: inherit;
+    filter: invert(50%);
+  }

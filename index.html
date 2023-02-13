@@ -21,8 +21,8 @@
           <h2>Digital Signal Processing and Machine Learning Engineer</h2>
           <div id="dico">
             <a href="https://linkedin.com/in/rayandaod/"><img src="assets/clinkedin.svg" class="iico" /></a>
-            <a href="https://twitter.com/rayandaod"><img src="assets/ctwitter.svg" class="iico" /></a>
-            <a href="https://github.com/rayandaod"><img src="assets/cgithub.png" class="iico"/></a>
+            <a href="https://twitter.com/rayandaod"><img src="assets/ctwitter.svg" class="iico"/></a>
+            <a href="https://github.com/rayandaod"><img src="assets/cgithub.png" class="iico" id="dark-icon"/></a>
             <a href="https://soundcloud.com/d_wn"><img src="assets/csoundcloud.svg" class="iico"/></a>
             <img src="assets/cemail.png" style="cursor: pointer;" class="iico" id="iemail" title="click to reveal" />
           </div>
@@ -31,11 +31,32 @@
       </div>
     </div>
 
+    <button id="dark-mode-toggle">
+      <img width=30px height=30px src="assets/dark_mode.png">
+    </button>
+    
+    <script>
+      const toggleButton = document.getElementById("dark-mode-toggle");
+      const ppic = document.getElementsByClassName("ppic")[0];
+      const caption = document.getElementsByClassName("caption")[0];
+
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+          ppic.src = "assets/me-dark-mode.jpg";
+          caption.style.display = "none";
+        } else {
+          ppic.src = "assets/me.jpg";
+          caption.style.display = "block";
+        }
+      });
+    </script>
+
     <br>
 
     <center>
       <div>
-        <b>Currently looking for opportunities for Sept-Nov 2023!</b>
+        <b>Currently looking for opportunities starting in Sept-Oct 2023!</b>
         <br>
         Contact me!
       </div>
@@ -46,19 +67,19 @@
     <div id="history" class="container">
       <div class="entry row">
         <div class="timespan">
-          <div style="color: black;">
-            <b>Jan 2023 - Now</b>
+          <div id="curr_date">
+            <b>Feb 2023 - Now</b>
           </div>
         </div>
         <div class="ico">
-          <div class="entry-dot" style="background-color: rgb(85, 85, 85);"></div>
-          <a href="https://www.bose.co.uk/en_gb/about_bose/innovations_achievements.html" target="_blank">
+          <div class="entry-dot" id="main-dot"></div>
+          <a id="dark-icon" href="https://www.bose.co.uk/en_gb/about_bose/innovations_achievements.html" target="_blank">
             <img src="assets/bose_logo.png"/>
            </a>
         </div>
         <div class="desc">
           <div class="htxt">
-            <b>Audio Machine Learning Researcher (Co-op)</b> at Bose, working with <a href="https://www.linkedin.com/in/mikolajkegler">Mikolaj Kegler</a> and <a href="https://www.linkedin.com/in/markostam">Marko Stamenovic</a> to improve algorithms for Bose products and contribute to Open Science.
+            <b>Audio Machine Learning Researcher (Co-op)</b> at Bose, working with <a class="hyperlink" href="https://www.linkedin.com/in/mikolajkegler">Mikolaj Kegler</a> and <a class="hyperlink" href="https://www.linkedin.com/in/markostam">Marko Stamenovic</a> to improve algorithms for Bose products and contribute to Open Science.
           </div>
         </div>
       </div>
@@ -74,8 +95,8 @@
            </a>
         </div>
         <div class="desc">
-          <b>Machine Learning Engineer</b> in the Multimedia Signal Processing Group (MMSPG) at EPFL. I worked with <a href="https://www.linkedin.com/in/touradjebrahimi">Prof. Dr Touradj Ebrahimi</a> on Computer Vision algorithms for video super-resolution and foreground extraction, as part of an European-Commission-funded project, <a href="http://www.admire3d.eu/project/">Advanced Mixed Reality (AdMiRe)</a>.
-          The project is now successfully validated by the reviewers and end users, and the code is publicly available <a href="https://github.com/mmspg/AdMiRe_EPFL">here</a>.
+          <b>Machine Learning Engineer</b> in the Multimedia Signal Processing Group (MMSPG) at EPFL. I worked with <a class="hyperlink" href="https://www.linkedin.com/in/touradjebrahimi">Prof. Dr Touradj Ebrahimi</a> on Computer Vision algorithms for video super-resolution and foreground extraction, as part of an European-Commission-funded project, <a class="hyperlink" href="http://www.admire3d.eu/project/">Advanced Mixed Reality (AdMiRe)</a>.
+          The project is now successfully validated by the reviewers and end users, and the code is publicly available <a class="hyperlink" href="https://github.com/mmspg/AdMiRe_EPFL">here</a>.
         </div>
       </div>
 
@@ -85,14 +106,14 @@
         </div>
         <div class="ico">
           <div class="entry-dot"></div>
-          <a href="https://www.logitech.com/en-us/about.html" target="_blank">
+          <a id="dark-icon" href="https://www.logitech.com/en-us/about.html" target="_blank">
             <img src="assets/logitech_logo.png"/>
           </a>
         </div>
         <div class="desc">
-          <b>Audio Machine Learning Engineer (Internship)</b> and Master's Thesis at Logitech with <a href="https://people.epfl.ch/paolo.prandoni">Dr Paolo Prandoni</a> and <a href="https://www.linkedin.com/in/milos-cernak-065a0515/">Dr Milos Cernak</a>.
+          <b>Audio Machine Learning Engineer (Internship)</b> and Master's Thesis at Logitech with <a class="hyperlink" href="https://people.epfl.ch/paolo.prandoni">Dr Paolo Prandoni</a> and <a class="hyperlink" href="https://www.linkedin.com/in/milos-cernak-065a0515/">Dr Milos Cernak</a>.
           This work resulted in a real-time ML model for source separation and extraction/removal of audio events, aimed at gamers and neurodivergent people.
-          My thesis is accessible <a href="https://rayan.daodnathoo.com/pdf/Master-Thesis-reworked.pdf">here</a>.
+          My thesis is accessible <a class="hyperlink" href="https://rayan.daodnathoo.com/pdf/Master-Thesis-reworked.pdf">here</a>.
         </div>
       </div>
 
@@ -108,7 +129,7 @@
         </div>
         <div class="desc">
           <b>MSc in Computer Science</b> at the Swiss Federal Institute of Technology in Lausanne (EPFL) with a specialization in Digital Signal Processing and Machine Learning.
-          Master's Semester Projects in the <a href="https://www.epfl.ch/labs/lcav/">LCAV</a> (Prof. Dr Martin Vetterli) with <a href="https://www.linkedin.com/in/sepand-kashani-3bb508a3/">Sepand Kashani</a> and <a href="https://www.linkedin.com/in/eric-bezzam/">Eric Bezzam</a> on audio related projects (JUCE application, <a href="https://github.com/rayandaod/Drum_Classification_AI_tool">drum sound classifier</a>, ...).
+          Master's Semester Projects in the <a class="hyperlink" href="https://www.epfl.ch/labs/lcav/">LCAV</a> (Prof. Dr Martin Vetterli) with <a class="hyperlink" href="https://www.linkedin.com/in/sepand-kashani-3bb508a3/">Sepand Kashani</a> and <a class="hyperlink" href="https://www.linkedin.com/in/eric-bezzam/">Eric Bezzam</a> on audio related projects (JUCE application, <a href="https://github.com/rayandaod/Drum_Classification_AI_tool">drum sound classifier</a>, ...).
           Master's Thesis and internship at Logitech (see above).
         </div>
       </div>
@@ -125,7 +146,7 @@
         </div>
         <div class="desc">
           <b>BSc in Computer Science</b> at the Swiss Federal Institute of Technology in Lausanne (EPFL) with a specialization in Software Engineering.
-          Bachelor's Semester Project in the <a href="https://www.epfl.ch/labs/ldm/">Media and Design Laboratory (LDM)</a> with <a href="https://www.linkedin.com/in/immanuelkoh/">Immanuel Koh</a>: <a href="https://www.epfl.ch/labs/ldm/interior-forensic/">3D indoor forensic using a drone</a>.
+          Bachelor's Semester Project in the <a class="hyperlink" href="https://www.epfl.ch/labs/ldm/">Media and Design Laboratory (LDM)</a> with <a class="hyperlink" href="https://www.linkedin.com/in/immanuelkoh/">Immanuel Koh</a>: <a href="https://www.epfl.ch/labs/ldm/interior-forensic/">3D indoor forensic using a drone</a>.
         </div>
       </div>
       <br/>
@@ -137,7 +158,7 @@
 
     <br/>
 
-    <div style="background-color: #eee; padding-top: 1px; margin-top: 10px;">
+    <div class="inter-row">
       <div id="pet-projects" class="container">
         <div class="ctitle">My projects</div>
 
@@ -148,8 +169,7 @@
             </a>
           </div>
           <div class="pdesc">
-            <a href="http://github.com/rayandaod/spoteezer">Spoteezer</a> is a web application allowing to convert a Deezer link into a Spotify link and vice-versa. It is now less a hustle (at least for me) to share music from Spotify to family and friends that are on Deezer :) I built it using HTML/CSS for the front-end and a Flask Python server as back-end. The latter communicates with the API of both streaming platforms to process the input Deezer link and provide the best Spotify match according to the information retrieved.
-            <a href="https://rayan.daodnathoo.com/spoteezer">Try it now!</a>
+            <a class="hyperlink" href="http://rayan.daodnathoo.com/spoteezer">Spoteezer</a> is a web application allowing to convert a Deezer link into a Spotify link and vice-versa. It is now less a hustle (at least for me) to share music from Spotify to family and friends that are on Deezer :) I built it using HTML/CSS for the front-end and a Flask Python server as back-end. The latter communicates with the API of both streaming platforms to process the input Deezer link and provide the best Spotify match according to the information retrieved.
           </div>
           <div class="pend"></div>
         </div>
@@ -162,7 +182,7 @@
 
       <div class="project">
         <div class="pico">
-          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/QT222KCB47GG" target="_blank">
+          <a id="dark-icon" href="https://www.coursera.org/account/accomplishments/specialization/certificate/QT222KCB47GG" target="_blank">
             <img src="assets/coursera_cert_logo.png"/>
           </a>
         </div>
@@ -183,13 +203,13 @@
 
       <div class="project">
         <div class="pico">
-          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/TELEK9A4SEYY" target="_blank">
+          <a id="dark-icon" href="https://www.coursera.org/account/accomplishments/specialization/certificate/TELEK9A4SEYY" target="_blank">
             <img src="assets/coursera_cert_logo.png"/>
           </a>
         </div>
           <div class="courses">
             <div>
-              <b>Tensorflow Developper Specialization</b> (Nov 2022)
+              <b>Tensorflow Developper Specialization</b> (Dec 2022)
               <li>Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</li>
               <li>Convolutional Neural Networks in TensorFlow</li>
               <li>Natural Language Processing in TensorFlow</li>
@@ -201,7 +221,7 @@
 
       <div class="project">
         <div class="pico">
-          <a href="" target="_blank">
+          <a id="dark-icon" href="" target="_blank">
             <img src="assets/coursera_cert_logo_blurred.png"/>
           </a>
         </div>
@@ -217,12 +237,12 @@
       <br/>
     </div>
 
-    <div style="background-color: #eee; padding-top: 1px; margin-top: 10px;">
+    <div class="inter-row">
       <div class="container">
         <div class="ctitle">Publications</div>
 
         <div class="pub">
-          <div class="pub-title"><a href="https://infoscience.epfl.ch/record/296080">AI-based telepresence for broadcast applications</a></div>
+          <div class="pub-title"><a class="hyperlink" href="https://infoscience.epfl.ch/record/296080">AI-based telepresence for broadcast applications</a></div>
           <div class="pub-venue">Digital Image Processing XLV · Aug 22, 2022</div>
           <div class="pub-authors">Piñeiro Monteagudo, Henrique; Daod Nathoo, Rayan; Deillon, Laurent; Changsheng, Gao; Ebrahimi, Touradj</div>
         </div>
@@ -231,7 +251,7 @@
     </div>  
 
     <div id="my-music" class="container">
-      <div class="ctitle">My music</div>
+      <div class="ctitle">My Music</div>
 
       I started producing electronic music in 2018, first with Cubase, then FL Studio, and finally Ableton Live. Here are some of the tracks I released:
       <br/><br/>
@@ -273,15 +293,15 @@
       <br/>
     </div>
 
-    <div style="background-color: #eee; padding-top: 1px; margin-top: 10px;">
+    <div class="inter-row">
       <div class="container">
         <div class="ctitle">Unsorted</div>
         <ul style="padding-left: 10px;">
           <li>I was born in Paris and mostly lived in Senegal (11 years) before coming in Switzerland for my studies at EPFL.</li>
-          <li>I've been part of <a href="https://clic.epfl.ch/">CLIC</a>'s committee (the EPFL Computer Science and Communication Systems Student Association) as Sponsoring Manager, Event Manager, and President from 2018 to 2021. It was a wonderful personal experience!</li>
+          <li>I've been part of <a class="hyperlink" href="https://clic.epfl.ch/">CLIC</a>'s committee (the EPFL Computer Science and Communication Systems Student Association) as Sponsoring Manager, Event Manager, and President from 2018 to 2021. It was a wonderful personal experience!</li>
           <li>I've been a Communication Staff for the EPFL IC School during 2 years. I learned a lot! (and earned some pocket money :p)</li>
-          <li>In August-September 2022, I extensively participated in the ideation and the editing of a video project to celebrate the 2022 graduation. It was shown during the EPFL IC diploma ceremony last October - watch it <a href="https://clic.epfl.ch/news/45">here</a>!</li>
-          <li>This website is heavily inspired from <a href="https://karpathy.ai/">Andrej Karpathy's</a> - I thank him for that great template. 0 frameworks were used to make it. This is pure HTML and CSS in two static files.</li>
+          <li>In August-September 2022, I extensively participated in the ideation and the editing of a video project to celebrate the 2022 graduation. It was shown during the EPFL IC diploma ceremony last October - watch it <a class="hyperlink" href="https://clic.epfl.ch/news/45">here</a>!</li>
+          <li>This website is heavily inspired from <a class="hyperlink" href="https://karpathy.ai/">Andrej Karpathy's</a> - I thank him for that great template. 0 frameworks were used to make it. This is pure HTML and CSS in two static files.</li>
         </ul>
         <br/>
       </div>
