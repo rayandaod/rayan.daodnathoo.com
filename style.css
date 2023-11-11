@@ -280,7 +280,6 @@ body.dark-mode .card {
     display: flex;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
 }
 .pico {
     /* float: left; */
@@ -315,10 +314,10 @@ body.dark-mode .pub-title {
 }
 .pub-venue {
     display: inline;
-    color: #090;
+    color: rgb(74, 121, 63);
 }
 body.dark-mode .pub-venue {
-    color: #0f0;
+    color: rgb(74, 121, 63);
 }
 .pub-authors {
     display: block;
