@@ -17,5 +17,5 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd sites/rayan.daodnathoo.com/
-          bash deploy.sh
+          cd sites/
+          bash deploy_main.sh
