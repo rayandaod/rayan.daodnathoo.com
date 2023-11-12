@@ -9,21 +9,38 @@
   </head>
   <body>
 
-    <!-- idea: have a javascript animated loss function converging in the header? :p -->
+    <!-- Save header variables -->
+    <script>
+      var img_src_pro = "assets/me.jpg";
+      var title_content_pro = "Rayan Daod Nathoo";
+      var subtitle_content_pro = "ML & Software Engineer";
+      var bio_content_pro = `I am a self-driven Machine Learning & Software Engineer with experience in multiple fields of AI/ML.
+        I hold a MSc in Computer Science from the <a class="hyperlink" href="#epfl">Swiss Federal Institute of Technology Lausanne</a> (EPFL) and had the honnor to collaborate with stimulating companies such as <a class="hyperlink" href="#bose">Bose</a> and <a class="hyperlink" href="#logitech">Logitech</a>.
+        In addition to my technical work, I am passionate about <a class="hyperlink" href="#my-music">music production</a> and have been involved in various roles within student associations during my studies.
+        Feel free to explore my diverse skillset, <a class="hyperlink" href="#pet-projects">projects</a>, and <a class="hyperlink" href="#my-music">music productions</a> to get a better understanding of who I am and what I bring to the table.`;
+      var sub_bio_content_pro = `I am very excited to join <a class="hyperlink" href="https://www.atinary.com">Atinary Technologies</a> as a Junior Software Engineer in December 2023!`;
+
+      var img_src_dawn = "assets/me_dark_mode.png";
+      var title_content_dawn = "D/WN";
+      var subtitle_content_dawn = "Music Producer";
+      var bio_content_dawn = ``;
+      var sub_bio_content_dawn = `<i>Music is how we decorate time</i>`;
+    </script>
+
     <div id="dhead" class="container">
       <div class="row">
         <div id="dpic">
-          <img src="assets/me.jpg" class="ppic"/>
+          <img id="profilePic"/>
           <figcaption class="caption"><a href="https://goo.gl/maps/dfft7eTLp4GqGNVbA">Oeschinen Lake, Switzerland</a></figcaption>
         </div>
         <div id="ddesc">
-            <h1><span style="color: cornflowerblue;">Rayan</span> Daod Nathoo</h1>
-          <h2>ML & Software Engineer</h2>
+          <h1 id="title"></h1>
+          <h2 id="subtitle"></h2>
           <div id="dico">
-            <a href="https://linkedin.com/in/rayandaod/"><img src="assets/clinkedin.svg" class="iico" /></a>
-            <a href="https://twitter.com/rayandaod"><img src="assets/ctwitter.svg" class="iico"/></a>
+            <a href="https://linkedin.com/in/rayandaod/"><img src="assets/clinkedin.svg" class="iico" id="social_linkedin"/></a>
+            <a href="https://twitter.com/rayandaod"><img src="assets/ctwitter.svg" class="iico" id="social_twitter"/></a>
             <a href="https://github.com/rayandaod"><img src="assets/cgithub.png" class="iico" id="dark-icon"/></a>
-            <a href="https://soundcloud.com/d_wn"><img src="assets/csoundcloud.svg" class="iico"/></a>
+            <a href="https://soundcloud.com/d_wn"><img src="assets/csoundcloud.svg" class="iico" id="social_soundcloud"/></a>
             <img src="assets/cemail.png" style="cursor: pointer;" class="iico" id="iemail" title="click to reveal" />
           </div>
           <div id="demail"></div> <!-- will reveal email -->
@@ -31,44 +48,42 @@
       </div>
     </div>
 
+    <!-- Insert modular content -->
+    <script>
+      const profilePic = document.getElementById('profilePic')
+      const title = document.getElementById('title')
+      const subtitle = document.getElementById('subtitle')
+
+      profilePic.src = img_src_pro;
+      title.innerHTML = title_content_pro;
+      subtitle.innerHTML = subtitle_content_pro;
+    </script>
+
     <button id="dark-mode-toggle">
       <img width=30px height=30px src="assets/dark_mode.png">
     </button>
-    
-    <script>
-      const toggleButton = document.getElementById("dark-mode-toggle");
-      const ppic = document.getElementsByClassName("ppic")[0];
-      const caption = document.getElementsByClassName("caption")[0];
-
-      toggleButton.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        if (document.body.classList.contains("dark-mode")) {
-          ppic.src = "assets/me_dark_mode.png";
-          caption.style.display = "none";
-        } else {
-          ppic.src = "assets/me.jpg";
-          caption.style.display = "block";
-        }
-      });
-    </script>
 
     <br>
 
     <center>
-      <div style="max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
-		I am a self-driven Machine Learning & Software Engineer with experience in multiple fields of AI/ML.
-		I hold a MSc in Computer Science from the <a class="hyperlink" href="#epfl">Swiss Federal Institute of Technology Lausanne</a> (EPFL) and had the honnor to collaborate with stimulating companies such as <a class="hyperlink" href="#bose">Bose</a> and <a class="hyperlink" href="#logitech">Logitech</a>.
-		In addition to my technical work, I am passionate about <a class="hyperlink" href="#my-music">music production</a> and have been involved in various roles within student associations during my studies.
-		Feel free to explore my diverse skillset, <a class="hyperlink" href="#pet-projects">projects</a>, and <a class="hyperlink" href="#my-music">music productions</a> to get a better understanding of who I am and what I bring to the table.
-      </div>
-
+      <div id="bio" style="max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;"></div>
       <br>
-      I am very excited to join <a class="hyperlink" href="https://www.atinary.com">Atinary Technologies</a> as a Junior Software Engineer in December 2023!
+      <div id="sub_bio"></div>
     </center>
 
-    <hr>
+    <!-- Insert modular content -->
+    <script>
+      const bio = document.getElementById("bio");
+      const sub_bio = document.getElementById("sub_bio");
+
+      bio.innerHTML = bio_content_pro;
+      sub_bio.innerHTML = sub_bio_content_pro;
+    </script>
+
+    <hr class="hline">
 
     <div id="history" class="container">
+      
       <div class="entry row">
         <div class="timespan">
           <div id="curr_date">
@@ -212,15 +227,16 @@
       </div>
     </div>
     <br/>
+    
   </div>
 
-    <div style="text-align: center;">
+    <div id="resume" style="text-align: center;">
       <a href="http://rayan.daodnathoo.com/pdf/rayan_daodnathoo_resume.pdf" class="button">My Resume</a>
     </div>
     <br>
 	
 	<div class="inter-row">
-	  <div id="pet-projects" class="container">
+	  <div id="certificates" class="container">
 		<div class="ctitle">Additional Certificates</div>
 
 		<div class="project">
@@ -315,7 +331,7 @@
           <br>
 
         </div>
-        <br/>
+        <hr class="hline">
 
         <div>
           <div class="project">
@@ -343,7 +359,7 @@
           </div>
           <br>
         </div>
-        <br/>
+        <hr>
 
         <div class="project">
           <div class="pico">
@@ -364,7 +380,7 @@
             > <a class="hyperlink" href="https://github.com/rayandaod/ForumEPFL-Search" style="color: blue; text-decoration: none;">Code</a> (WIP)
           </div>
         </div>
-        <br>
+        <hr>
 
         <div class="project">
           <div class="pico">
@@ -380,6 +396,7 @@
           </div>
           <div class="pend"></div>
         </div>
+        <hr>
 
         <div class="project">
           <div class="pico">
@@ -398,6 +415,7 @@
           </div>
           <div class="pend"></div>
         </div>
+        <br>
 
       </div>
     </div>
@@ -445,14 +463,14 @@
     </div>
 
     
-    <div class="container">
+    <div class="container" id="publications">
       <div class="ctitle">Publications</div>
       <p style="font-style: italic; color: grey; font-size: small;"></p>* denotes equal contribution</p>
 
       <div class="pub">
         <div class="pub-title"><a class="hyperlink" href="https://arxiv.org/abs/2309.08144">Two-Step Knowledge Distillation for Tiny Speech Enhancement</a></div>
         <div class="pub-venue">ArXiv pre-print, under review at ICASSP 2024</div>
-        <div class="pub-authors"><b>Rayan Daod Nathoo</b>*, Mikolaj Kegler*, Marko Stamenovic</div>
+        <div class="pub-authors"><b>Rayan Daod Nathoo</b>*, Mikolaj Kegler*, Marko Stamenovic (Bose Corporation)</div>
       </div>
       <img src="assets/kd.png" alt="Description of the image" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
       <br>
@@ -460,7 +478,7 @@
   <div class="pub">
         <div class="pub-title"><a class="hyperlink" href="https://infoscience.epfl.ch/record/296080">AI-based telepresence for broadcast applications</a></div>
         <div class="pub-venue">SPIE Applications of Digital Image Processing XLV, San Diego, USA · Aug 22, 2022</div>
-        <div class="pub-authors">Henrique Piñeiro Monteagudo, <b>Rayan Daod Nathoo</b>, Laurent Deillon, Gao Changsheng, Touradj Ebrahimi</div>
+        <div class="pub-authors">Henrique Piñeiro Monteagudo, <b>Rayan Daod Nathoo</b>, Laurent Deillon, Gao Changsheng, Touradj Ebrahimi (Multimedia Signal Processing Group, EPFL)</div>
       </div>
       <img src="assets/admire.png" alt="Description of the image" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
       <br>
@@ -468,21 +486,11 @@
       <div class="pub">
         <div class="pub-title"><a class="hyperlink" href="https://rayan.daodnathoo.com/pdf/Master-Thesis-reworked.pdf">Personalised Audio Enhancement</a></div>
         <div class="pub-venue">Master's Thesis - Swiss Federal Institute of Technology Lausanne (EPFL)</div>
-        <div class="pub-authors"><b>Rayan Daod Nathoo</b></div>
+        <div class="pub-authors"><b>Rayan Daod Nathoo</b> (EPFL)</div>
       </div>
       <img src="assets/thesis.png" alt="Description of the image" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
   
       <br/>
-    </div>
-
-    <div class="inter-row">
-      <div class="container">
-        <br>
-        <ul style="padding-left: 10px;">
-          This website is heavily inspired from <a class="hyperlink" href="https://karpathy.ai/">Andrej Karpathy's</a> - I thank him for that great template. 0 frameworks were used to make it. This is pure HTML and CSS in two static files. Feel free to reuse it!
-        </ul>
-        <br/>
-      </div>
     </div>
 
     <br><br><br><br><br><br><br><br><br><br><br>
