@@ -423,7 +423,6 @@ a.hyperlink:hover{
     filter: invert(50%);
   }
 
-
-.center {
-    text-align: center;
+.music_platform {
+    text-decoration: none;
 }
