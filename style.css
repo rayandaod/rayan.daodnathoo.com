@@ -422,3 +422,8 @@ a.hyperlink:hover{
     color: inherit;
     filter: invert(50%);
   }
+
+
+.center {
+    text-align: center;
+}
