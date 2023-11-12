@@ -505,5 +505,66 @@
         e_is_shown = !e_is_shown;
       })
     </script>
+
+    <!-- Dark mode -->
+    <script>
+      const toggleButton = document.getElementById("dark-mode-toggle");
+      
+      const ppic = document.getElementById("profilePic");
+      const caption = document.getElementsByClassName("caption")[0];
+      
+      const social_linkedin = document.getElementById("social_linkedin");
+      const social_twitter = document.getElementById("social_twitter");
+      const social_github = document.getElementById("social_github");
+      const iemail = document.getElementById("iemail");
+      
+      const hline = document.getElementsByClassName("hline")[0];
+      
+      const history = document.getElementById("history");
+      const resume = document.getElementById("resume");
+      const certificates = document.getElementById("certificates");
+      const pet_projects = document.getElementById("pet-projects");
+      const publications = document.getElementById("publications");
+
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+          ppic.src = img_src_dawn;
+          caption.style.display = "none";
+          social_linkedin.style.display = "none";
+          social_twitter.style.display = "none";
+          social_github.style.display = "none";
+          iemail.style.display = "none";
+          hline.style.display = "none";
+          title.innerHTML = title_content_dawn;
+          subtitle.innerHTML = subtitle_content_dawn;
+          bio.innerHTML = bio_content_dawn;
+          sub_bio.innerHTML = sub_bio_content_dawn;
+          history.style.display = "none";
+          resume.style.display = "none";
+          certificates.style.display = "none";
+          pet_projects.style.display = "none";
+          publications.style.display = "none";
+        } else {
+          ppic.src = img_src_pro;
+          caption.style.display = "block";
+          social_linkedin.style.display = "flex";
+          social_twitter.style.display = "flex";
+          social_github.style.display = "flex";
+          iemail.style.display = "flex";
+          hline.style.display = "block";
+          title.innerHTML = title_content_pro;
+          subtitle.innerHTML = subtitle_content_pro;
+          bio.innerHTML = bio_content_pro;
+          sub_bio.innerHTML = sub_bio_content_pro;
+          history.style.display = "block";
+          resume.style.display = "block";
+          certificates.style.display = "block";
+          pet_projects.style.display = "block";
+          publications.style.display = "block";
+        }
+      });
+    </script>
+
   </body>
 </html>
