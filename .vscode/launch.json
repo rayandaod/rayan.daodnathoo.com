@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Serve site (no-cache, :8124)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/devserver.py",
+      "args": ["8124"],
+      "console": "integratedTerminal"
+    }
+  ]
+}
