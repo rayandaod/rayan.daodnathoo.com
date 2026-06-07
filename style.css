@@ -15,6 +15,7 @@
   --dot-main: #555555;
   --venue: rgb(74, 121, 63);
   --authors: #990000;
+  --link-veil: rgba(0, 0, 0, 0.07);
   --max-width: 960px;
 }
 
@@ -31,6 +32,7 @@
   --dot: #555555;
   --dot-main: #ffffff;
   --authors: #ff5a5a;
+  --link-veil: rgba(255, 255, 255, 0.12);
 }
 
 /* ===========================================================================
@@ -55,8 +57,35 @@ body {
 a {
   color: inherit;
   text-decoration: underline dotted 2px;
+  text-underline-offset: 0.15em;
+  border-radius: 3px;
+  transition: background-color 0.15s ease;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
-a:hover { filter: invert(50%); }
+a:hover { background-color: var(--link-veil); }
+
+/* Image links: veil overlays the image, not behind it */
+a:has(> img) {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 5px;
+}
+a:has(> img):hover { background-color: transparent; }
+a:has(> img)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--link-veil);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+a:has(> img):hover::after { opacity: 1; }
+a:has(> img) > img { border-radius: inherit; }
 
 img { display: block; }
 
@@ -147,6 +176,7 @@ hr {
   gap: 12px;
   flex-wrap: wrap;
 }
+.socials a { border-radius: 6px; }
 .socials img {
   width: 36px;
   height: 36px;
@@ -213,12 +243,11 @@ hr {
   position: relative;
   border-left: 2px solid var(--line);
   min-height: 100%;
+  padding-left: 12px;
 }
 .entry__icon img {
   width: 100%;
-  max-width: 64px;
-  margin-left: 12px;
-  border-radius: 5px;
+  max-width: 56px;
 }
 
 .dot {
@@ -251,7 +280,7 @@ hr {
   background-color: var(--band);
   text-decoration: none;
 }
-.button:hover { filter: none; background-color: var(--accent); color: #fff; border-color: var(--accent); }
+.button:hover { background-color: var(--accent); color: #fff; border-color: var(--accent); }
 
 /* ===========================================================================
    Certificates & projects
@@ -267,7 +296,6 @@ hr {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  border-radius: 5px;
 }
 .media__body { flex: 1 1 0; min-width: 0; }
 .media__body ul { margin: 6px 0 0; padding-left: 1.2em; }
@@ -280,7 +308,6 @@ hr {
   max-width: 100%;
   height: auto;
   margin: 6px auto 0;
-  border-radius: 5px;
 }
 
 /* ===========================================================================
@@ -309,8 +336,10 @@ hr {
 .track__caption a { color: var(--muted); text-decoration: none; }
 
 .platforms { text-align: center; margin: 16px 0; }
-.platforms a { display: inline-block; margin: 0 6px; }
-.platforms a:hover { filter: none; }
+.platforms a {
+  margin: 0 6px;
+  border-radius: 6px;
+}
 .platforms img { width: 48px; height: 48px; }
 
 /* ===========================================================================
@@ -335,6 +364,41 @@ hr {
   margin: 0 auto;
 }
 
+.talk-entry {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.talk-entry__preview {
+  flex: 0 0 auto;
+}
+.talk-entry__preview img {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+}
+.talk-entry__preview--upcoming {
+  width: 160px;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid var(--card-border);
+  background-color: var(--band);
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+.talk-entry__body {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.talk-entry__body .pub {
+  margin-bottom: 8px;
+}
+
 .footer-space { height: 80px; }
 
 /* ===========================================================================
@@ -351,11 +415,14 @@ hr {
 @media (max-width: 560px) {
   .entry { grid-template-columns: 56px 40px 1fr; }
   .entry__date { font-size: 11px; padding-right: 6px; }
-  .entry__icon img { max-width: 32px; margin-left: 8px; }
+  .entry__icon img { max-width: 26px; }
   .entry__body { padding-left: 14px; font-size: 15px; }
 
   .media { gap: 12px; }
   .media__icon img { width: 56px; height: 56px; }
 
   .pub-figure img { max-width: 100%; }
+
+  .talk-entry__preview img,
+  .talk-entry__preview--upcoming { width: 120px; }
 }
