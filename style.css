@@ -267,6 +267,27 @@ hr {
   font-size: 16px;
 }
 
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-left: 0;
+  margin: 10px 0 0;
+}
+.tags li {
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--link-veil);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 4px 9px;
+  white-space: nowrap;
+}
+
 /* ===========================================================================
    Buttons
    =========================================================================== */
@@ -354,6 +375,13 @@ hr {
 .pub__title { color: var(--text); }
 .pub__venue { color: var(--venue); }
 .pub__authors { color: var(--authors); }
+.pub__abstract {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-style: italic;
+}
 
 .pub-figure {
   margin: 0 auto 16px;
