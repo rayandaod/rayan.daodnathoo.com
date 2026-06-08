@@ -33,7 +33,7 @@
     <!-- ================= Header ================= -->
     <header class="container header">
       <div class="header__photo">
-        <img id="profile-pic" src="assets/me.jpg" data-light="assets/me.jpg" data-dark="assets/me_dark_mode.jpeg" alt="Rayan Daod Nathoo">
+        <img id="profile-pic" src="assets/me.jpg" alt="Rayan Daod Nathoo">
         <figcaption class="caption">
           <a href="https://goo.gl/maps/dfft7eTLp4GqGNVbA">Oeschinen Lake, Switzerland</a>
         </figcaption>
@@ -578,13 +578,11 @@
     <script>
       (function () {
         var root = document.documentElement;
-        var pic = document.getElementById("profile-pic");
         var caption = document.querySelector(".caption");
         var toggle = document.getElementById("theme-toggle");
 
         function apply(dark) {
           root.classList.toggle("dark-mode", dark);
-          pic.src = dark ? pic.dataset.dark : pic.dataset.light;
           caption.style.visibility = dark ? "hidden" : "visible";
         }
 
