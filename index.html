@@ -55,6 +55,19 @@
       </div>
     </header>
 
+    <!-- ================= Section navigation ================= -->
+    <nav class="section-nav" aria-label="Page sections">
+      <div class="section-nav__inner">
+        <a href="#work-experience">Work Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#pet-projects">Projects</a>
+        <a href="#my-music">Music</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+      </div>
+    </nav>
+
     <p class="container bio">
       I am naturally drawn to impactful and technically challenging problems, with a soft spot for applied research.
       At my best when I need to innovate under hard constraints, I move comfortably between research and production, and
@@ -70,7 +83,7 @@
 
     <!-- ================= History ================= -->
     <section class="container" id="history">
-      <h2 class="section-title">Work Experience</h2>
+      <h2 class="section-title" id="work-experience">Work Experience</h2>
       <div class="entry entry--current">
         <div class="entry__date">Apr 2026 – Now</div>
         <div class="entry__icon">
@@ -78,7 +91,7 @@
           <a href="https://www.atinary.com" target="_blank" rel="noopener"><img src="assets/atinary_logo.png" alt="Atinary"></a>
         </div>
         <div class="entry__body" id="atinary">
-          <b>Machine Learning Engineer</b> (AI Research &amp; Innovation Team) at <a href="https://www.atinary.com">Atinary Technologies</a>.
+          <b>Machine Learning Engineer</b> (AI Research &amp; Innovation Team) at <a href="https://www.atinary.com">Atinary Technologies</a> - 
           Researching next-generation Bayesian Optimization methods to accelerate hypothesis search across high-dimensional chemical and materials science spaces.
           Work focuses on agentic AI systems, novel acquisition functions, and surrogate model architectures that reduce the number of wet-lab experiments
           required to discover optimal compounds, closing the loop between experimental design and data-driven scientific discovery. Translates research directly into
@@ -94,10 +107,7 @@
         <div class="entry__date">Mar 2025 – Apr 2026</div>
         <div class="entry__icon"><span class="dot"></span></div>
         <div class="entry__body">
-          <b>Machine Learning Engineer</b> (AI &amp; Data Engineering Team) at <a href="https://www.atinary.com">Atinary Technologies</a>.
-          Designed and built scalable training and inference pipelines for serving thousands of user-specific predictive models in production (AWS, MLflow, Docker).
-          Architected the ML system to support iterative experimental loops, enabling researchers to query, update, and redeploy surrogate models in-step with
-          new laboratory data.
+          <b>Machine Learning Engineer</b> (AI &amp; Data Engineering Team) - Designed and built scalable training and inference pipelines for serving thousands of user-specific predictive models in production (AWS, MLflow, Docker). Architected the ML system to support iterative experimental loops, enabling researchers to query, update, and redeploy surrogate models in-step with new laboratory data.
           <ul class="tags">
             <li>Training Pipeline</li>
             <li>Inference Pipeline</li>
@@ -110,10 +120,7 @@
         <div class="entry__date">Dec 2023 – Mar 2025</div>
         <div class="entry__icon"><span class="dot"></span></div>
         <div class="entry__body">
-          <b>Junior Software Engineer</b> at <a href="https://www.atinary.com">Atinary Technologies</a>.
-          Built user-facing backend features on the scientific computing platform, resolved critical production issues for enterprise clients, and optimized
-          core APIs and database queries for lower latency. Improved team architecture and developer tooling, laying the infrastructure groundwork for
-          the ML systems built subsequently.
+          <b>Junior Software Engineer</b> - Built user-facing backend features on the scientific computing platform, resolved critical production issues for enterprise clients, and optimized core APIs and database queries for lower latency. Improved team architecture and developer tooling, laying the infrastructure groundwork for the ML systems built subsequently.
           <ul class="tags">
             <li>Backend Development</li>
             <li>Developer Experience</li>
@@ -128,7 +135,7 @@
           <a href="https://www.bose.co.uk/en_gb/about_bose.html" target="_blank" rel="noopener"><img class="invert-on-dark" src="assets/bose_logo.png" alt="Bose"></a>
         </div>
         <div class="entry__body" id="bose">
-          <b>ML Research Intern</b> at <a href="https://www.bose.co.uk/en_gb/about_bose.html">Bose Corporation</a>.
+          <b>ML Research Intern</b> at <a href="https://www.bose.co.uk/en_gb/about_bose.html">Bose Corporation</a> -
           Developed a two-step Knowledge Distillation framework for compressing high-capacity sequence networks into sub-100k-parameter
           models subject to hard memory, energy, and latency constraints. The method decouples representation alignment, transferring
           latent geometric structure from teacher to student via a Similarity-Preserving loss, from raw target fine-tuning, enabling the
@@ -158,7 +165,7 @@
         <div class="entry__body">
           <b>Computer Vision Engineer</b> in the
           <a href="https://www.epfl.ch/labs/mmspg/">Multimedia Signal Processing Group (MMSPG)</a> at
-          <a href="https://www.epfl.ch/about/">EPFL</a>. I evaluated and deployed
+          <a href="https://www.epfl.ch/about/">EPFL</a> - Evaluated and deployed
           open-source Image Segmentation and Super-Resolution deep learning models into a video streaming pipeline, as part of
           <a href="http://www.admire3d.eu/project/">AdMiRe</a>, an
           <a href="https://cordis.europa.eu/project/id/952027">EC-funded project (Horizon 2020)</a>.
@@ -185,7 +192,7 @@
         </div>
         <div class="entry__body" id="logitech">
           <b>Machine Learning Intern</b> and Master's Thesis at
-          <a href="https://www.logitech.com/en-us/about.html">Logitech</a>.
+          <a href="https://www.logitech.com/en-us/about.html">Logitech</a> -
           Designed and prototyped a real-time, low-latency conditioned source separation system for machine perception under live acoustic
           environments. The model accepts a continuous 1D mixture stream and extracts target components conditioned on a learned embedding
           vector, enabling dynamic, personalized parsing of complex acoustic scenes with strict latency requirements. Applied to two
@@ -205,7 +212,7 @@
         </div>
       </div>
 
-      <h2 class="section-title">Education</h2>
+      <h2 class="section-title" id="education">Education</h2>
 
       <div class="entry">
         <div class="entry__date">2019 – 2022</div>
@@ -221,8 +228,8 @@
           Coursework and projects concentrated on machine learning methods for sequential data and physical signal processing.
           <ul class="tags">
             <li>Machine Learning</li>
-            <li>Signal Processing</li>
             <li>Deep Learning</li>
+            <li>Signal Processing</li>
           </ul>
           <ul class="links">
             <li><a href="https://rayan.daodnathoo.com/pdf/Master-Thesis-reworked.pdf">Master's Thesis</a> at <a href="https://www.logitech.com/en-us/about.html" target="_blank" rel="noopener">Logitech</a> (see above)</li>
@@ -357,7 +364,6 @@
         </div>
       </div>
       <div class="demo">
-        Demo
         <a href="https://rayan.daodnathoo.com/spoteezer" target="_blank" rel="noopener">
           <img src="assets/spoteezer_demo.gif" alt="Spoteezer demo">
         </a>
@@ -380,7 +386,6 @@
         </div>
       </div>
       <div class="demo">
-        Demo
         <a href="https://github.com/rayandaod/french-intent-classification" target="_blank" rel="noopener">
           <img src="assets/french_intent_demo.gif" alt="Chatbot demo">
         </a>

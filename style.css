@@ -7,7 +7,7 @@
   --muted: #999999;
   --faint: #bbbbbb;
   --line: #cfcfcf;
-  --band: #eeeeee;
+  --band: #f2f7f1;
   --card-bg: #ffffff;
   --card-border: #dddddd;
   --accent: #2f6fb3;
@@ -25,7 +25,7 @@
   --muted: #8a8a8a;
   --faint: #777777;
   --line: #3a3a3a;
-  --band: #1c1c1c;
+  --band: #1a2119;
   --card-bg: #1e1e1e;
   --card-border: #3a3a3a;
   --accent: #6fa8e0;
@@ -42,8 +42,8 @@
 
 html { scroll-behavior: smooth; }
 
-/* Keep anchored targets clear of the top edge when jumped to */
-:target { scroll-margin-top: 24px; }
+/* Keep anchored targets clear of the sticky nav when jumped to */
+:target { scroll-margin-top: 72px; }
 
 body {
   margin: 0;
@@ -216,6 +216,42 @@ hr {
   max-width: 760px;
   margin: 24px auto;
   text-align: center;
+}
+
+/* ===========================================================================
+   Section navigation banner
+   =========================================================================== */
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.section-nav__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 8px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 8px;
+}
+.section-nav a {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--muted);
+  border: 1px solid transparent;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+.section-nav a:hover {
+  color: var(--text);
+  background-color: var(--band);
+  border-color: var(--card-border);
 }
 
 /* Icons that are dark by default and need inverting in dark mode */
