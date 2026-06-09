@@ -518,6 +518,12 @@
         <div class="pub__title"><a href="https://infoscience.epfl.ch/record/296080">AI-based telepresence for broadcast applications</a></div>
         <div class="pub__venue">SPIE Applications of Digital Image Processing XLV, San Diego, USA · Aug 22, 2022</div>
         <div class="pub__authors">Henrique Piñeiro Monteagudo, <b>Rayan Daod Nathoo</b>, Laurent Deillon, Gao Changsheng, Touradj Ebrahimi (MMSPG, EPFL, Lausanne, Switzerland)</div>
+        <p class="pub__abstract">
+          Introduces a real-time GPU pipeline that composites remote webcam participants into a TV studio by chaining
+          learning-based background matting with super-resolution upscaling before merging with host video. Deployed
+          in the AdMiRe mixed-reality project, the system sustains ≥25 fps and validated positively in both objective
+          and subjective broadcast trials.
+        </p>
       </div>
       <div class="pub-figure">
         <a href="https://infoscience.epfl.ch/record/296080" target="_blank" rel="noopener"><img src="assets/admire.png" alt="AI-based telepresence figure"></a>
@@ -527,6 +533,17 @@
         <div class="pub__title"><a href="https://rayan.daodnathoo.com/pdf/Master-Thesis-reworked.pdf">Personalised Audio Enhancement</a></div>
         <div class="pub__venue">Master's Thesis, Swiss Federal Institute of Technology Lausanne (EPFL)</div>
         <div class="pub__authors"><b>Rayan Daod Nathoo</b> (EPFL, Lausanne, Switzerland)</div>
+        <p class="pub__abstract">
+          Adapted from a causal VoiceFilter speech-separation architecture, the proposed system conditions time-frequency
+          mask estimation on jointly trained class embeddings rather than speaker d-vectors, enabling users to select which
+          audio event to extract from a mono mixture in real time. Training relies on GPU-accelerated dynamic mixing that
+          continuously synthesises background–foreground pairs with random SNR, chunk placement, and adversarial
+          only-background examples, so the model responds only when the requested event is present. Focused on footstep
+          manipulation in gaming, the separator reaches 9.82 dB SI-SDR on six-second synthetic mixtures and transfers with
+          promising but imperfect results to real gameplay recordings; the same architecture generalises to 41 FSD Kaggle
+          event classes with 9.81 dB SI-SDR on four-second two-event mixtures, demonstrating that personalised, causal
+          audio scene customisation is feasible within tens of milliseconds of CPU inference latency.
+        </p>
       </div>
       <div class="pub-figure">
         <a href="https://rayan.daodnathoo.com/pdf/Master-Thesis-reworked.pdf" target="_blank" rel="noopener"><img src="assets/thesis.png" alt="Master's thesis figure"></a>
