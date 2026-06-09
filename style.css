@@ -173,22 +173,41 @@ hr {
 .socials {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
 }
-.socials a { border-radius: 6px; }
-.socials img {
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-}
-.icon-button {
-  padding: 0;
-  border: 0;
+
+/* Social chip: colorful icon + plain-word label */
+.social,
+.socials a.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 13px 6px 10px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text);
   background: none;
-  line-height: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  text-decoration: none;
   cursor: pointer;
+  overflow: visible;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
+.social img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.social:hover {
+  border-color: var(--text);
+  background-color: var(--link-veil);
+}
+/* Neutralize the generic image-link veil for chips */
+.socials a.social::after { content: none; }
 
 #email {
   margin-top: 10px;
