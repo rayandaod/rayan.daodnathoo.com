@@ -327,7 +327,7 @@ hr {
 /* ===========================================================================
    Buttons
    =========================================================================== */
-.actions { text-align: center; margin: 8px 0; }
+.actions { text-align: center; margin: 32px 0; }
 .button {
   display: inline-block;
   padding: 9px 18px;
