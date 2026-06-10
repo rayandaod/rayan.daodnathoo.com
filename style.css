@@ -404,6 +404,12 @@ hr {
   color: var(--muted);
 }
 .contrib__note a { color: var(--accent); }
+.contrib__talk {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+.contrib__talk a { color: var(--accent); }
 
 /* ===========================================================================
    Buttons
