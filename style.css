@@ -7,7 +7,7 @@
   --muted: #999999;
   --faint: #bbbbbb;
   --line: #cfcfcf;
-  --band: #f2f7f1;
+  --band: #f5f9fd;
   --card-bg: #ffffff;
   --card-border: #dddddd;
   --accent: #2f6fb3;
@@ -25,7 +25,7 @@
   --muted: #8a8a8a;
   --faint: #777777;
   --line: #3a3a3a;
-  --band: #1a2119;
+  --band: #161d28;
   --card-bg: #1e1e1e;
   --card-border: #3a3a3a;
   --accent: #6fa8e0;
@@ -42,8 +42,9 @@
 
 html { scroll-behavior: smooth; }
 
-/* Keep anchored targets clear of the sticky nav when jumped to */
-:target { scroll-margin-top: 72px; }
+/* Keep anchored targets clear of the sticky nav when jumped to.
+   --nav-h is updated from JS to match the real (possibly wrapped) nav height. */
+:target { scroll-margin-top: calc(var(--nav-h, 72px) + 12px); }
 
 body {
   margin: 0;
@@ -221,6 +222,7 @@ hr {
   position: absolute;
   top: 16px;
   right: 16px;
+  z-index: 60;
   padding: 6px;
   line-height: 0;
   cursor: pointer;

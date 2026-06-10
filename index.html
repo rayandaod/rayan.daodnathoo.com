@@ -30,6 +30,19 @@
       <img src="assets/dark_mode.png" alt="">
     </button>
 
+    <!-- ================= Section navigation ================= -->
+    <nav class="section-nav" aria-label="Page sections">
+      <div class="section-nav__inner">
+        <a href="#work-experience">Work Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#pet-projects">Projects</a>
+        <a href="#my-music">Music</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+      </div>
+    </nav>
+
     <!-- ================= Header ================= -->
     <header class="container header">
       <div class="header__photo">
@@ -52,19 +65,6 @@
         <div id="email"></div>
       </div>
     </header>
-
-    <!-- ================= Section navigation ================= -->
-    <nav class="section-nav" aria-label="Page sections">
-      <div class="section-nav__inner">
-        <a href="#work-experience">Work Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#pet-projects">Projects</a>
-        <a href="#my-music">Music</a>
-        <a href="#publications">Publications</a>
-        <a href="#talks">Talks</a>
-      </div>
-    </nav>
 
     <p class="container bio">
       I am naturally drawn to impactful and technically challenging problems, with a soft spot for applied research.
@@ -610,6 +610,19 @@
         var root = document.documentElement;
         var caption = document.querySelector(".caption");
         var toggle = document.getElementById("theme-toggle");
+
+        // Keep --nav-h in sync with the sticky nav's real height so anchor
+        // jumps clear it even when the pills wrap to several rows on mobile.
+        var nav = document.querySelector(".section-nav");
+        function syncNavHeight() {
+          root.style.setProperty("--nav-h", nav.offsetHeight + "px");
+        }
+        syncNavHeight();
+        if (window.ResizeObserver) {
+          new ResizeObserver(syncNavHeight).observe(nav);
+        } else {
+          window.addEventListener("resize", syncNavHeight);
+        }
 
         function apply(dark) {
           root.classList.toggle("dark-mode", dark);
