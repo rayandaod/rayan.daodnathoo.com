@@ -220,17 +220,18 @@ hr {
 /* Theme toggle */
 .theme-toggle {
   position: absolute;
-  top: 16px;
+  top: 50%;
   right: 16px;
+  transform: translateY(-50%);
   z-index: 60;
-  padding: 6px;
+  padding: 4px;
   line-height: 0;
   cursor: pointer;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 6px;
 }
-.theme-toggle img { width: 26px; height: 26px; }
+.theme-toggle img { width: 22px; height: 22px; }
 .dark-mode .theme-toggle img { filter: invert(100%); }
 
 .bio {
