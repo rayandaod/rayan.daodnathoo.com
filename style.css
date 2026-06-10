@@ -345,6 +345,66 @@ hr {
   white-space: nowrap;
 }
 
+/* Collapsible GitHub contributions */
+.contrib {
+  margin-top: 14px;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  background-color: var(--card-bg);
+}
+.contrib > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.15s ease;
+}
+.contrib > summary::-webkit-details-marker { display: none; }
+.contrib > summary::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid currentColor;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: transform 0.15s ease;
+}
+.contrib[open] > summary::before { transform: rotate(90deg); }
+.contrib > summary:hover { color: var(--text); }
+.contrib__body {
+  padding: 4px 12px 12px;
+}
+/* White backing so the classic grey squares + date labels stay legible
+   in both light and dark mode (the chart image always renders on white). */
+.contrib__graph {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  padding: 8px;
+}
+.contrib__fallback {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--muted);
+  margin: 0;
+}
+.contrib__note {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted);
+}
+.contrib__note a { color: var(--accent); }
+
 /* ===========================================================================
    Buttons
    =========================================================================== */
