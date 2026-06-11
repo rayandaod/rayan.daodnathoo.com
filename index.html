@@ -91,8 +91,8 @@
           <b>Machine Learning Engineer</b> (AI Research &amp; Innovation Team) at <a href="https://www.atinary.com">Atinary Technologies</a> - 
           Researching next-generation Bayesian Optimization methods to accelerate hypothesis search across high-dimensional chemical and materials science spaces.
           Work focuses on agentic AI systems, novel acquisition functions, and surrogate model architectures that reduce the number of wet-lab experiments
-          required to discover optimal compounds, closing the loop between experimental design and data-driven scientific discovery. Translates research directly into
-          production-grade ML pipeline components.
+          required to discover optimal compounds, closing the loop between experimental design and data-driven scientific discovery. Due to my previous experience,
+          my role is not only to experiment new research ideas and benchmark them, but also to deploy them in production-grade ML pipeline components.
           <ul class="tags">
             <li>Bayesian Optimization</li>
             <li>Agentic AI</li>
@@ -121,7 +121,7 @@
         <div class="entry__date">Mar 2025 – Apr 2026</div>
         <div class="entry__icon"><span class="dot"></span></div>
         <div class="entry__body">
-          <b>Machine Learning Engineer</b> (AI &amp; Data Engineering Team) - Designed and built scalable training and inference pipelines for serving thousands of user-specific predictive models in production (AWS, MLflow, Docker). Architected the ML system to support iterative experimental loops, enabling researchers to query, update, and redeploy surrogate models in-step with new laboratory data.
+          <b>Machine Learning Engineer</b> (AI &amp; Data Engineering Team) - Designed and built scalable training and inference pipelines for serving thousands of user-specific predictive models in production (MLflow, MLServer, Docker). Architected the ML system to support iterative experimental loops, enabling researchers to query and automatically redeploy surrogate models trained on updated laboratory data.
           <ul class="tags">
             <li>Training Pipeline</li>
             <li>Inference Pipeline</li>
@@ -137,7 +137,7 @@
         <div class="entry__date">Dec 2023 – Mar 2025</div>
         <div class="entry__icon"><span class="dot"></span></div>
         <div class="entry__body">
-          <b>Junior Software Engineer</b> - Built user-facing backend features on the scientific computing platform, resolved critical production issues for enterprise clients, and optimized core APIs and database queries for lower latency. Improved team architecture and developer tooling, laying the infrastructure groundwork for the ML systems built subsequently.
+          <b>Junior Software Engineer</b> - Built user-facing backend features on the scientific computing platform SDLabs, resolved critical production issues for enterprise clients, and optimized core APIs and database queries for lower latency. Delivered major architectual changes and improved developer tooling across the entire technical team.
           <ul class="tags">
             <li>Backend Development</li>
             <li>Developer Experience</li>
@@ -156,12 +156,12 @@
           Developed a two-step Knowledge Distillation framework for compressing high-capacity sequence networks into sub-100k-parameter
           models subject to hard memory, energy, and latency constraints. The method decouples representation alignment, transferring
           latent geometric structure from teacher to student via a Similarity-Preserving loss, from raw target fine-tuning, enabling the
-          student to inherit a rich internal feature space despite severe data constraints. Enforced strict streaming causality throughout:
+          student to inherit a rich internal feature as a basis for further training. Enforced strict streaming causality throughout:
           zero look-ahead, fully online inference on continuous 1D physical signals. Demonstrated state-of-the-art distillation efficiency
           at sub-100k-parameter budgets and in adverse low-SNR regimes. Supervised by <a href="https://mkegler.github.io/">Mikolaj Kegler</a>
           (Audio Scientist) and <a href="https://www.linkedin.com/in/markostam">Marko Stamenovic</a> (Principal Engineer).
           <ul class="links">
-            <li><a href="https://ieeexplore.ieee.org/document/10446796">Publication</a> (Published at <a href="https://cmsworkshops.com/ICASSP2024/view_session.php?SessionID=1288">ICASSP 2024</a>)</li>
+            <li><a href="https://arxiv.org/abs/2309.08144">Publication</a> (Published at <a href="https://cmsworkshops.com/ICASSP2024/view_session.php?SessionID=1288">ICASSP 2024</a>)</li>
           </ul>
           <ul class="tags">
             <li>Model Compression</li>
@@ -377,12 +377,17 @@
         </div>
         <div class="media__body">
           <span class="media__date">2023</span>
-          <b>Spoteezer.</b> I love music, and sharing it across platforms like Deezer and Spotify has always been a struggle.
+          <b>Spoteezer</b> - I love music, and sharing it across platforms like Deezer and Spotify has always been a struggle.
           So I created Spoteezer: a web app that converts Spotify links to Deezer (v1) and back (v2). I built it with HTML/CSS
           (frontend) and a Flask Python server (backend). It interacts with both platforms' APIs to return the best match.
           <ul class="links">
             <li><a href="https://rayan.daodnathoo.com/spoteezer">Try it out</a></li>
             <li><a href="https://github.com/rayandaod/spoteezer">Code</a></li>
+          </ul>
+          <ul class="tags">
+            <li>Web App</li>
+            <li>Flask</li>
+            <li>REST APIs</li>
           </ul>
         </div>
       </div>
@@ -400,12 +405,17 @@
         </div>
         <div class="media__body">
           <span class="media__date">2024</span>
-          <b>French Intent Classification.</b> A French chatbot intent classifier built for a technical challenge, combining
+          <b>French Intent Classification</b> - A French chatbot intent classifier built for a technical challenge, combining
           pre-trained Hugging Face Transformers (FlauBERT, CamemBERT) as embeddings with classic ML classifiers (Logistic
           Regression, MLP). Trained on a French-translated subset of the <a href="https://github.com/clinc/oos-eval">CLINC150
           dataset</a>, the best model reached a 98% average F1 score on the test set.
           <ul class="links">
             <li><a href="https://github.com/rayandaod/french-intent-classification">Code</a></li>
+          </ul>
+          <ul class="tags">
+            <li>NLP</li>
+            <li>Transformers</li>
+            <li>Text Classification</li>
           </ul>
         </div>
       </div>
@@ -419,11 +429,56 @@
 
       <div class="media">
         <div class="media__icon">
+          <a href="https://github.com/rayandaod/model_compression_assignment/tree/main" target="_blank" rel="noopener"><img class="invert-on-dark" src="assets/github.png" alt="GitHub"></a>
+        </div>
+        <div class="media__body">
+          <span class="media__date">2023</span>
+          <b>Model Compression</b> - Built for a technical challenge, an exploration of techniques to reduce the size and inference
+          cost of deep neural networks while preserving accuracy, covering approaches such as pruning, quantization, and knowledge distillation.
+          <ul class="links">
+            <li><a href="https://github.com/rayandaod/model_compression_assignment/tree/main">Code</a></li>
+            <li><a href="https://github.com/rayandaod/model_compression_assignment/blob/main/report.pdf">Report (PDF)</a></li>
+          </ul>
+          <ul class="tags">
+            <li>Pruning</li>
+            <li>Quantization</li>
+            <li>Knowledge Distillation</li>
+            <li>PyTorch</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="media">
+        <div class="media__icon">
+          <a href="https://github.com/rayandaod/transformer_from_scratch" target="_blank" rel="noopener"><img class="invert-on-dark" src="assets/github.png" alt="GitHub"></a>
+        </div>
+        <div class="media__body">
+          <span class="media__date">2023</span>
+          <b>Transformer from Scratch</b> - A from-scratch implementation of the Transformer architecture, building the core
+          components (multi-head self-attention, positional encodings, encoder/decoder blocks) to better understand how the
+          model works under the hood.
+          <ul class="links">
+            <li><a href="https://github.com/rayandaod/transformer_from_scratch">Code</a></li>
+          </ul>
+          <ul class="tags">
+            <li>Transformers</li>
+            <li>Self-Attention</li>
+            <li>PyTorch</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="media">
+        <div class="media__icon">
           <a href="https://github.com/rayandaod/ForumEPFL-Search" target="_blank" rel="noopener"><img class="invert-on-dark" src="assets/github.png" alt="GitHub"></a>
         </div>
         <div class="media__body">
           <span class="media__date">2023</span>
-          <b>Forum EPFL Search.</b> While looking for companies to contact during my job search, I realised that the
+          <b>Forum EPFL Search</b> - While looking for companies to contact during my job search, I realised that the
           <a href="https://forum.epfl.ch/">Forum EPFL</a> website's search engine was not very practical, as it only compared
           the query to company names. So I started a project that:
           <ol>
@@ -432,7 +487,11 @@
             <li>finds the best-matching companies by passing the user-tailored prompt and the scraped data to a Large Language Model.</li>
           </ol>
           <ul class="links">
-            <li><a href="https://github.com/rayandaod/ForumEPFL-Search">Code</a> (WIP)</li>
+            <li><a href="https://github.com/rayandaod/ForumEPFL-Search">Code</a></li>
+          </ul>
+          <ul class="tags">
+            <li>Web Scraping</li>
+            <li>Prompt Engineering</li>
           </ul>
         </div>
       </div>
@@ -445,11 +504,15 @@
         </div>
         <div class="media__body">
           <span class="media__date">2022</span>
-          <b>Master's Graduation Video.</b> I edited this 15-minute video celebrating the 2022 graduation of EPFL Computer and
+          <b>Master's Graduation Video</b> - I edited this 15-minute video celebrating the 2022 graduation of EPFL Computer and
           Communication Sciences Master's students. It was broadcast during the ceremony, in front of the students and their
           guests.
           <ul class="links">
-            <li><a href="https://clic.epfl.ch/news/45">Watch it here</a></li>
+            <li><a href="https://clic.epfl.ch/news/interview-dimplomes-2022">Watch it here</a></li>
+          </ul>
+          <ul class="tags">
+            <li>Video Editing</li>
+            <li>Adobe Premiere Pro</li>
           </ul>
         </div>
       </div>
@@ -462,12 +525,17 @@
         </div>
         <div class="media__body">
           <span class="media__date">2023</span>
-          <b>This website.</b> The idea is to gather all my work and projects in one place. I built it with plain HTML and CSS,
+          <b>This website</b> - The idea is to gather all my work and projects in one place. I built it with plain HTML and CSS,
           based on <a href="https://karpathy.ai/">Andrej Karpathy's website</a> as a template. Thanks to him for the
           inspiration! It was a great opportunity to learn about web development and design, as well as CI/CD pipelines using
           GitHub Actions. Feel free to reuse the template!
           <ul class="links">
             <li><a href="https://github.com/rayandaod/rayan.daodnathoo.com">Code</a></li>
+          </ul>
+          <ul class="tags">
+            <li>HTML/CSS</li>
+            <li>Web Design</li>
+            <li>CI/CD</li>
           </ul>
         </div>
       </div>
@@ -538,7 +606,7 @@
         </p>
       </div>
       <div class="pub-figure">
-        <a href="https://cmsworkshops.com/ICASSP2024/view_session.php?SessionID=1288" target="_blank" rel="noopener"><img src="assets/kd.png" alt="Two-Step Knowledge Distillation figure"></a>
+        <a href="https://arxiv.org/abs/2309.08144" target="_blank" rel="noopener"><img src="assets/kd.png" alt="Two-Step Knowledge Distillation figure"></a>
       </div>
 
       <div class="pub">

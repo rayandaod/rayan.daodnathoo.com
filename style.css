@@ -331,7 +331,7 @@ hr {
   flex-wrap: wrap;
   gap: 6px;
   padding-left: 0;
-  margin: 10px 0 0;
+  margin: 18px 0 0;
 }
 .tags li {
   font-size: 11px;
@@ -444,6 +444,8 @@ hr {
 }
 .media__body { flex: 1 1 0; min-width: 0; }
 .media__body ul { margin: 6px 0 0; padding-left: 1.2em; }
+.media__body ul.links { padding-left: 0; }
+.media__body ul.tags { margin-top: 18px; padding-left: 0; }
 
 .media__date {
   float: right;
