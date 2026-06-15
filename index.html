@@ -29,12 +29,12 @@
     <nav class="section-nav" aria-label="Page sections">
       <div class="section-nav__inner">
         <a href="#work-experience">Work Experience</a>
+        <a href="#publications">Publications</a>
         <a href="#education">Education</a>
+        <a href="#talks">Talks</a>
         <a href="#certificates">Certificates</a>
         <a href="#pet-projects">Projects</a>
         <a href="#my-music">Music</a>
-        <a href="#publications">Publications</a>
-        <a href="#talks">Talks</a>
       </div>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
         <img src="assets/dark_mode.png" alt="">
@@ -230,6 +230,69 @@
       </section>
     </div>
 
+    <!-- ================= Publications ================= -->
+    <section class="container" id="publications">
+      <h2 class="section-title">Publications</h2>
+
+      <p>
+        Open-sourcing my work is important to me. I believe sharing knowledge and code is the best way to learn and improve.
+        Here are my publications so far. I hope to add more in the future!
+      </p>
+      <p style="font-style: italic; color: var(--muted); font-size: 14px;">* denotes equal contribution</p>
+
+      <div class="pub">
+        <div class="pub__title"><a href="https://cmsworkshops.com/ICASSP2024/view_session.php?SessionID=1288">Two-Step Knowledge Distillation for Tiny Speech Enhancement</a></div>
+        <div class="pub__venue">ICASSP 2024</div>
+        <div class="pub__authors"><b>Rayan Daod Nathoo</b>*, Mikolaj Kegler*, Marko Stamenovic (Bose Corporation, USA)</div>
+        <p class="pub__abstract">
+          The Two-Step framework decouples representation learning from target imitation: a first distillation stage injects latent geometric
+          structure into a sub-100k-parameter causal student via a Similarity-Preserving loss, before a second stage fine-tunes against raw
+          regression targets, directly addressing the data-scarcity problem intrinsic to streaming-constrained deployment environments.
+          This staged separation allows the student to inherit a rich internal representation space independently of output supervision,
+          yielding consistent gains over single-stage distillation baselines at sub-100k parameter budgets and under adverse low-SNR
+          operating conditions where conventional distillation collapses.
+        </p>
+      </div>
+      <div class="pub-figure">
+        <a href="https://arxiv.org/abs/2309.08144" target="_blank" rel="noopener"><img src="assets/kd.png" alt="Two-Step Knowledge Distillation figure"></a>
+      </div>
+
+      <div class="pub">
+        <div class="pub__title"><a href="https://infoscience.epfl.ch/record/296080">AI-based telepresence for broadcast applications</a></div>
+        <div class="pub__venue">SPIE Applications of Digital Image Processing XLV, San Diego, USA · Aug 22, 2022</div>
+        <div class="pub__authors">Henrique Piñeiro Monteagudo, <b>Rayan Daod Nathoo</b>, Laurent Deillon, Gao Changsheng, Touradj Ebrahimi (MMSPG, EPFL, Lausanne, Switzerland)</div>
+        <p class="pub__abstract">
+          Introduces a real-time GPU pipeline that composites remote webcam participants into a TV studio by chaining
+          learning-based background matting with super-resolution upscaling before merging with host video. Deployed
+          in the AdMiRe mixed-reality project, the system sustains ≥25 fps and validated positively in both objective
+          and subjective broadcast trials.
+        </p>
+      </div>
+      <div class="pub-figure">
+        <a href="https://infoscience.epfl.ch/record/296080" target="_blank" rel="noopener"><img src="assets/admire.png" alt="AI-based telepresence figure"></a>
+      </div>
+
+      <div class="pub">
+        <div class="pub__title"><a href="https://rayan.daodnathoo.com/pdf/Master-Thesis-reworked.pdf">Personalised Audio Enhancement</a></div>
+        <div class="pub__venue">Master's Thesis, Swiss Federal Institute of Technology Lausanne (EPFL)</div>
+        <div class="pub__authors"><b>Rayan Daod Nathoo</b> (EPFL, Lausanne, Switzerland)</div>
+        <p class="pub__abstract">
+          Adapted from a causal VoiceFilter speech-separation architecture, the proposed system conditions time-frequency
+          mask estimation on jointly trained class embeddings rather than speaker d-vectors, enabling users to select which
+          audio event to extract from a mono mixture in real time. Training relies on GPU-accelerated dynamic mixing that
+          continuously synthesises background–foreground pairs with random SNR, chunk placement, and adversarial
+          only-background examples, so the model responds only when the requested event is present. Focused on footstep
+          manipulation in gaming, the separator reaches 9.82 dB SI-SDR on six-second synthetic mixtures and transfers with
+          promising but imperfect results to real gameplay recordings; the same architecture generalises to 41 FSD Kaggle
+          event classes with 9.81 dB SI-SDR on four-second two-event mixtures, demonstrating that personalised, causal
+          audio scene customisation is feasible within tens of milliseconds of CPU inference latency.
+        </p>
+      </div>
+      <div class="pub-figure">
+        <a href="https://rayan.daodnathoo.com/pdf/Master-Thesis-reworked.pdf" target="_blank" rel="noopener"><img src="assets/thesis.png" alt="Master's thesis figure"></a>
+      </div>
+    </section>
+
     <!-- ================= Education ================= -->
     <section class="container" id="history">
       <h2 class="section-title" id="education">Education</h2>
@@ -309,6 +372,49 @@
 
     <div class="actions">
       <a href="https://rayan.daodnathoo.com/pdf/rayan_daodnathoo_resume.pdf" class="button">My Resume</a>
+    </div>
+
+    <!-- ================= Talks ================= -->
+    <div class="band">
+      <section class="container" id="talks">
+      <h2 class="section-title">Talks</h2>
+
+      <div class="talk-entry">
+        <div class="talk-entry__preview talk-entry__preview--upcoming">Upcoming</div>
+        <div class="talk-entry__body">
+          <div class="pub">
+            <div class="pub__title">Serving Personalized ML at Scale with Evolving Runtimes</div>
+            <div class="pub__venue">PyData 2026 (upcoming)</div>
+          </div>
+          <p>
+            How our small team serves thousands of user-specific models from a single Python service using dynamic model loading,
+            and keeps shipping training-code and dependency updates without breaking inference. Built end to end on open-source
+            tools like MLflow, MLServer, and KServe.
+          </p>
+        </div>
+      </div>
+
+      <div class="talk-entry">
+        <a class="talk-entry__preview" href="https://www.youtube.com/live/6EHiOFNqQ4o?si=9SsGkXr1mr25l2N9" target="_blank" rel="noopener">
+          <img src="assets/pycon_italia_2026.png" alt="PyCon Italia 2026 talk recording">
+        </a>
+        <div class="talk-entry__body">
+          <div class="pub">
+            <div class="pub__title"><a href="https://2026.pycon.it/en/event/simplicity-scales-rewriting-to-a-django-monolith-and-monorepo">Simplicity Scales: Rewriting to a Django Monolith and Monorepo</a></div>
+            <div class="pub__venue">PyCon Italia 2026 · May 28, 2026</div>
+          </div>
+          <p>
+            How we improved developer velocity at a startup by consolidating our code into a multi-language monorepo and replacing microservices
+            with a Django monolith. The talk covers the decision-making framework and lessons that transfer to similar codebases.
+          </p>
+          <ul class="links">
+            <li><a href="https://2026.pycon.it/en/event/simplicity-scales-rewriting-to-a-django-monolith-and-monorepo">Talk details</a></li>
+            <li><a href="https://www.youtube.com/live/6EHiOFNqQ4o?si=9SsGkXr1mr25l2N9">Video recording</a></li>
+            <li><a href="https://github.com/atinary-rdaod/monorepo_template/">Monorepo template</a></li>
+          </ul>
+        </div>
+      </div>
+      </section>
     </div>
 
     <!-- ================= Certificates ================= -->
@@ -579,112 +685,6 @@
           <a href="https://open.spotify.com/artist/3X58Lrx9aTOzVYb5yToJUp?si=jgwYaMsWQxeQoFa70MTijw" aria-label="Spotify"><img src="assets/spotify.png" alt="Spotify"></a>
           <a href="https://www.deezer.com/fr/artist/128450572" aria-label="Deezer"><img src="assets/deezer.png" alt="Deezer"></a>
         </div>
-      </section>
-    </div>
-
-    <!-- ================= Publications ================= -->
-    <section class="container" id="publications">
-      <h2 class="section-title">Publications</h2>
-
-      <p>
-        Open-sourcing my work is important to me. I believe sharing knowledge and code is the best way to learn and improve.
-        Here are my publications so far. I hope to add more in the future!
-      </p>
-      <p style="font-style: italic; color: var(--muted); font-size: 14px;">* denotes equal contribution</p>
-
-      <div class="pub">
-        <div class="pub__title"><a href="https://cmsworkshops.com/ICASSP2024/view_session.php?SessionID=1288">Two-Step Knowledge Distillation for Tiny Speech Enhancement</a></div>
-        <div class="pub__venue">ICASSP 2024</div>
-        <div class="pub__authors"><b>Rayan Daod Nathoo</b>*, Mikolaj Kegler*, Marko Stamenovic (Bose Corporation, USA)</div>
-        <p class="pub__abstract">
-          The Two-Step framework decouples representation learning from target imitation: a first distillation stage injects latent geometric
-          structure into a sub-100k-parameter causal student via a Similarity-Preserving loss, before a second stage fine-tunes against raw
-          regression targets, directly addressing the data-scarcity problem intrinsic to streaming-constrained deployment environments.
-          This staged separation allows the student to inherit a rich internal representation space independently of output supervision,
-          yielding consistent gains over single-stage distillation baselines at sub-100k parameter budgets and under adverse low-SNR
-          operating conditions where conventional distillation collapses.
-        </p>
-      </div>
-      <div class="pub-figure">
-        <a href="https://arxiv.org/abs/2309.08144" target="_blank" rel="noopener"><img src="assets/kd.png" alt="Two-Step Knowledge Distillation figure"></a>
-      </div>
-
-      <div class="pub">
-        <div class="pub__title"><a href="https://infoscience.epfl.ch/record/296080">AI-based telepresence for broadcast applications</a></div>
-        <div class="pub__venue">SPIE Applications of Digital Image Processing XLV, San Diego, USA · Aug 22, 2022</div>
-        <div class="pub__authors">Henrique Piñeiro Monteagudo, <b>Rayan Daod Nathoo</b>, Laurent Deillon, Gao Changsheng, Touradj Ebrahimi (MMSPG, EPFL, Lausanne, Switzerland)</div>
-        <p class="pub__abstract">
-          Introduces a real-time GPU pipeline that composites remote webcam participants into a TV studio by chaining
-          learning-based background matting with super-resolution upscaling before merging with host video. Deployed
-          in the AdMiRe mixed-reality project, the system sustains ≥25 fps and validated positively in both objective
-          and subjective broadcast trials.
-        </p>
-      </div>
-      <div class="pub-figure">
-        <a href="https://infoscience.epfl.ch/record/296080" target="_blank" rel="noopener"><img src="assets/admire.png" alt="AI-based telepresence figure"></a>
-      </div>
-
-      <div class="pub">
-        <div class="pub__title"><a href="https://rayan.daodnathoo.com/pdf/Master-Thesis-reworked.pdf">Personalised Audio Enhancement</a></div>
-        <div class="pub__venue">Master's Thesis, Swiss Federal Institute of Technology Lausanne (EPFL)</div>
-        <div class="pub__authors"><b>Rayan Daod Nathoo</b> (EPFL, Lausanne, Switzerland)</div>
-        <p class="pub__abstract">
-          Adapted from a causal VoiceFilter speech-separation architecture, the proposed system conditions time-frequency
-          mask estimation on jointly trained class embeddings rather than speaker d-vectors, enabling users to select which
-          audio event to extract from a mono mixture in real time. Training relies on GPU-accelerated dynamic mixing that
-          continuously synthesises background–foreground pairs with random SNR, chunk placement, and adversarial
-          only-background examples, so the model responds only when the requested event is present. Focused on footstep
-          manipulation in gaming, the separator reaches 9.82 dB SI-SDR on six-second synthetic mixtures and transfers with
-          promising but imperfect results to real gameplay recordings; the same architecture generalises to 41 FSD Kaggle
-          event classes with 9.81 dB SI-SDR on four-second two-event mixtures, demonstrating that personalised, causal
-          audio scene customisation is feasible within tens of milliseconds of CPU inference latency.
-        </p>
-      </div>
-      <div class="pub-figure">
-        <a href="https://rayan.daodnathoo.com/pdf/Master-Thesis-reworked.pdf" target="_blank" rel="noopener"><img src="assets/thesis.png" alt="Master's thesis figure"></a>
-      </div>
-    </section>
-
-    <!-- ================= Talks ================= -->
-    <div class="band">
-      <section class="container" id="talks">
-      <h2 class="section-title">Talks</h2>
-
-      <div class="talk-entry">
-        <div class="talk-entry__preview talk-entry__preview--upcoming">Upcoming</div>
-        <div class="talk-entry__body">
-          <div class="pub">
-            <div class="pub__title">Serving Personalized ML at Scale with Evolving Runtimes</div>
-            <div class="pub__venue">PyData 2026 (upcoming)</div>
-          </div>
-          <p>
-            How our small team serves thousands of user-specific models from a single Python service using dynamic model loading,
-            and keeps shipping training-code and dependency updates without breaking inference. Built end to end on open-source
-            tools like MLflow, MLServer, and KServe.
-          </p>
-        </div>
-      </div>
-
-      <div class="talk-entry">
-        <a class="talk-entry__preview" href="https://www.youtube.com/live/6EHiOFNqQ4o?si=9SsGkXr1mr25l2N9" target="_blank" rel="noopener">
-          <img src="assets/pycon_italia_2026.png" alt="PyCon Italia 2026 talk recording">
-        </a>
-        <div class="talk-entry__body">
-          <div class="pub">
-            <div class="pub__title"><a href="https://2026.pycon.it/en/event/simplicity-scales-rewriting-to-a-django-monolith-and-monorepo">Simplicity Scales: Rewriting to a Django Monolith and Monorepo</a></div>
-            <div class="pub__venue">PyCon Italia 2026 · May 28, 2026</div>
-          </div>
-          <p>
-            How we improved developer velocity at a startup by consolidating our code into a multi-language monorepo and replacing microservices
-            with a Django monolith. The talk covers the decision-making framework and lessons that transfer to similar codebases.
-          </p>
-          <ul class="links">
-            <li><a href="https://2026.pycon.it/en/event/simplicity-scales-rewriting-to-a-django-monolith-and-monorepo">Talk details</a></li>
-            <li><a href="https://www.youtube.com/live/6EHiOFNqQ4o?si=9SsGkXr1mr25l2N9">Video recording</a></li>
-            <li><a href="https://github.com/atinary-rdaod/monorepo_template/">Monorepo template</a></li>
-          </ul>
-        </div>
-      </div>
       </section>
     </div>
 
