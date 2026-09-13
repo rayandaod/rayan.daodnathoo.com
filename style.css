@@ -410,6 +410,7 @@ hr {
   font-size: 13px;
   color: var(--muted);
 }
+.contrib__talk + .contrib__talk { margin-top: 4px; }
 .contrib__talk a { color: var(--accent); }
 
 /* ===========================================================================
